@@ -1,25 +1,29 @@
 /* eslint-disable no-undef */
-const Queue = require('../queue/Queue')
-const store = require('../../store')
+const Queue = require("../queue/Queue");
+const store = require("../../store");
 
 // Set up initial data.
 // --------------------
 
-const people = new Queue()
-store.people.forEach(person => people.enqueue(person))
+const PEOPLE = new Queue();
+store.people.forEach((person) => PEOPLE.enqueue(person));
 
 // --------------------
-
-module.exports = {
-  get() {
+const peopleService = {
+  getAll() {
     // Return all people in the queue.
+    return PEOPLE.all();
   },
 
-  enqueue(person) {
+  enqueuePerson(person) {
     // Add a person to the queue.
+    return PEOPLE.enqueue(person);
   },
 
-  dequeue() {
+  dequeuePerson() {
     // Remove a person from the queue.
-  }
-}
+    PEOPLE.dequeue();
+    return PEOPLE
+  },
+};
+module.exports = peopleService;
