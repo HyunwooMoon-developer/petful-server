@@ -1,12 +1,28 @@
 /* eslint-disable no-undef */
-const express = require('express')
-const cors = require('cors')
+const express = require("express");
+const cors = require("cors");
+const ErrorHandler = require("../ErrorHandler/ErrorHandler");
+const CatsRouter = require("../Cats/cats.router");
+const CLIENT_ORIGIN = require("../config");
+const DogsRouter = require("../Dogs/dogs.router");
 
-const app = express()
+const app = express();
 
-app.use(cors())
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN,
+  })
+);
 
-app.use('/people', require('../people/people.router'))
-app.use('/pets', require('../pets/pets.router'))
+app.use("/people", require("../people/people.router"));
+app.use("/api/cats", CatsRouter);
+app.use("/api/dogs", DogsRouter);
 
-module.exports = app
+app.get("/", (req, res) => {
+  res.send("Hello, petful");
+});
+
+//error handler
+app.use(ErrorHandler);
+
+module.exports = app;
