@@ -15,7 +15,7 @@ app.use(
   })
 );
 
-app.use("/people", require("../people/people.router"));
+
 app.use("/api/cats", CatsRouter);
 app.use("/api/dogs", DogsRouter);
 app.use("/api/people", PeopleRouter);
