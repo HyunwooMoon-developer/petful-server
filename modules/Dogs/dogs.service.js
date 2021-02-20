@@ -23,7 +23,6 @@ const dogsService = {
   dequeueDog() {
     // Remove a pet from the queue.
     DOG.dequeue();
-    return DOG;
   },
 };
 

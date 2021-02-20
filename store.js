@@ -1,9 +1,12 @@
 /* eslint-disable no-undef */
 module.exports = {
   people: [
-    {name: "Randy Lahey"},
-    {name:  "Trevor Cory"},
-    {name:  "Jim Lahey"}],
+    { name: "Randy Lahey" },
+    { name: "Trevor Cory" },
+    { name: "Jim Lahey" },
+    { name: "Emma Stone" },
+    { name: "Tom Hanks" },
+  ],
 
   dogs: [
     {

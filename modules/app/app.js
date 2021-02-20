@@ -9,12 +9,7 @@ const PeopleRouter = require("../people/people.router");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: CLIENT_ORIGIN,
-  })
-);
-
+app.use(cors({ origin: CLIENT_ORIGIN }));
 
 app.use("/api/cats", CatsRouter);
 app.use("/api/dogs", DogsRouter);

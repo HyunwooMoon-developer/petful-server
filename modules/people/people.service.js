@@ -23,7 +23,6 @@ const peopleService = {
   dequeuePerson() {
     // Remove a person from the queue.
     PEOPLE.dequeue();
-    return PEOPLE
   },
 };
 module.exports = peopleService;

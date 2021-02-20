@@ -12,7 +12,8 @@ CatsRouter.route("/")
   })
   .delete((req, res, next) => {
     catsService.dequeueCat();
-    res.status(200).end();
+    const cat = catsService.getCat();
+    res.status(200).json(cat);
   });
 
 module.exports = CatsRouter;

@@ -16,13 +16,16 @@ PeopleRouter.route("/")
   .post(json, (req, res, next) => {
     // Add a new person to the queue.
     const { name } = req.body;
-    const person = { name };
-    const newUser = peopleService.enqueuePerson(person);
-    res.status(201).json(newUser);
+    const newUser = {name : name}
+
+    peopleService.enqueuePerson(newUser)
+    const people = peopleService.getAll()
+    res.status(201).json(people);
   })
   .delete((req, res, next) => {
     peopleService.dequeuePerson();
-    res.status(200).end();
+    const people = peopleService.getAll()
+    res.status(200).json(people);
   });
 
 module.exports = PeopleRouter;

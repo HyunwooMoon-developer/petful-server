@@ -12,7 +12,8 @@ DogsRouter.route("/")
   })
   .delete((req, res, next) => {
     dogsService.dequeueDog();
-    res.status(200).end();
+    const dog = dogsService.getDog();
+    res.status(200).json(dog);
   });
 
 module.exports = DogsRouter;
