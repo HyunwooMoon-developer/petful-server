@@ -7,7 +7,7 @@ const DogsRouter = express.Router();
 
 DogsRouter.route("/")
   .get((req, res, next) => {
-    const getDog = dogsService.getDog();
+    const getDog = dogsService.getAllDogs();
     res.status(200).json(getDog);
   })
   .delete((req, res, next) => {

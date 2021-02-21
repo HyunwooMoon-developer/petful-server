@@ -7,7 +7,7 @@ const CatsRouter = express.Router();
 
 CatsRouter.route("/")
   .get((req, res, next) => {
-    const getCat = catsService.getCat();
+    const getCat = catsService.getAllCats();
     res.status(200).json(getCat);
   })
   .delete((req, res, next) => {
