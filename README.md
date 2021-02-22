@@ -8,8 +8,8 @@ Live app : https://petful-client-template-sigma.vercel.app/
 
 Client Repo : https://github.com/HyunwooMoon-developer/petful-app.git
 
-![Screenshot](https://github.com/HyunwooMoon-developer/petful-app/blob/master/src/Image/screenshot1.png)
-![Screenshot](https://github.com/HyunwooMoon-developer/petful-app/blob/master/src/Image/screenshot2.png)
+![Screenshot1](https://github.com/HyunwooMoon-developer/petful-app/blob/master/src/Image/screenshot1.png)
+![Screenshot2](https://github.com/HyunwooMoon-developer/petful-app/blob/master/src/Image/screenshot2.png)
 
 ## What I Use for App
 
