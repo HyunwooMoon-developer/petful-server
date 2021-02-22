@@ -5,7 +5,6 @@ module.exports = {
     { name: "Trevor Cory" },
     { name: "Jim Lahey" },
     { name: "Emma Stone" },
-    { name: "Tom Hanks" },
   ],
 
   dogs: [

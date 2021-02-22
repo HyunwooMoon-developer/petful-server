@@ -24,7 +24,7 @@ PeopleRouter.route("/")
   })
   .delete((req, res, next) => {
     peopleService.dequeuePerson();
-    const people = peopleService.getAll()
+    const people = peopleService.getAll();
     res.status(200).json(people);
   });
 
