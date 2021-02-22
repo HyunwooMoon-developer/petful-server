@@ -93,3 +93,4 @@ DELETE  /api/dogs
 ```
 
 Delete first dog in the queue
+
